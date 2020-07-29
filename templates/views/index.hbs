@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head> 
+    <title>Weather</title>
+    <link rel='icon' href='/photo/weather.png'>
+    <link rel='stylesheet' href='/css/style.css'>
+    <script src="https://kit.fontawesome.com/42142524ba.js"></script>
+     <meta
+      content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1"
+      name="viewport"
+        />
+    <link href="bootstrap-4.2.1-dist/css/bootstrap.css" rel="stylesheet"/>      
+    <link rel="stylesheet" href="bootstrap-4.2.1-dist/css/bootstrap.min.css">  
+   
+</head>
+
+<body>
+     {{>header}}
+    <div class='main-content'>
+        <p> <i class="fas fa-cloud-rain"> </i> Send me your location</p>
+        <form>
+            <input placeholder='Location'>
+            <button>Search</button>
+        </form>
+        </br>
+        <p id='message-1'></p>
+        <p id='message-2'></p>
+    </div>
+    <footer>{{>footer}}</footer>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="bootstrap-4.2.1-dist/js/bootstrap.min.js"></script>
+    <script src='/js/app.js'></script>
+</body>
+</html>
