@@ -14,17 +14,15 @@ html, body {
 span{
     background-color: white;
     opacity: .7;
-    padding: 20px;
+    padding: 5px;
     border-radius: 3px
 }
 #message-1, #message-2{
     font-weight: bold;
 }
-
 button {
     cursor: pointer;
 }
-
 .navbar li a {
     color: #E0E1DD;
 }
@@ -33,12 +31,10 @@ button {
     background-color:#002c47;
     padding: 0;
 }
-
 .main-content {
     margin-top: 250px;
     text-align: center;
 }
-
 footer{
    opacity: .7;
     background-color: #dedbd4;

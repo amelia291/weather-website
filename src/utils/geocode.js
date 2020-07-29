@@ -1,8 +1,8 @@
 const request = require('request')
 
+//convert the location provided by the user into coordinates using mapbox.com
 const geocode = (address, callback) => {
     const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + encodeURIComponent(address) + '.json?access_token=pk.eyJ1IjoiYW1lbGlhMjkxIiwiYSI6ImNrY3czdjZwNTBhOXIyeW1waW92OHQ5NHAifQ.id4KtZ50CVkpo_TmLgNXhw&limit=1'
-
     request({url, json: true}, (error, {body}) => {
         if(error){
             callback('Unable to connect to location services!', undefined)

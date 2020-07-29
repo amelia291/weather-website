@@ -17,6 +17,7 @@ app.set('view engine', 'hbs')
 app.set('views', viewsPath)
 hbs.registerPartials(partialsPath)
 
+//main page
 app.get('', (req, res) => {
     res.render('index', {
         title: 'Weather',
@@ -24,6 +25,7 @@ app.get('', (req, res) => {
     })
 })
 
+//about page
 app.get('/about', (req, res) =>{
     res.render('about', {
         title: 'About',
@@ -31,6 +33,7 @@ app.get('/about', (req, res) =>{
     })
 })
 
+//help page
 app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help Page',
@@ -38,6 +41,8 @@ app.get('/help', (req, res) => {
         name: 'Amelia'
     })
 })
+
+//converting the location provided in the query string into coordinates and getting back weather information 
 app.get('/weather', (req, res) => {
     if (!req.query.address) {
         return res.send({
@@ -59,9 +64,9 @@ app.get('/weather', (req, res) => {
             })
         })
     })
+})
 
-    })
-
+//setting up 404 error page
 app.get('/help/*', (req, res) => {
     res.render('404', {
         message: 'Help article not found',
@@ -78,6 +83,7 @@ app.get('*', (req, res) => {
         message: 'Page not found.'
     })
 })
+
 app.listen(port, () => {
     console.log(`Server is up on port ${port}.`)
 })
